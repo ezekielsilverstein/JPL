@@ -31,7 +31,7 @@ start_time=time.time()
 #Atlas=webdriver.Firefox()
 #Atlas.get('http://isc.astro.cornell.edu/~sloan/library/swsatlas/aot1.html')
 
-#Import Greg Sloan data
+#Import Sloan data
 Sloan_List=np.genfromtxt('Sloan_List_RA_DEC.txt',delimiter='	',\
 skip_header=1,dtype=[('source',object),('TDT',object),('RA',object),\
 ('DEC',object),('classification',object)])
@@ -246,7 +246,7 @@ driver.get('http://irsa.ipac.caltech.edu/data/SWS/')
 #wait for page to load
 time.sleep(3)
 
-#Create MASSIVE 'FOR' LOOP
+#Create MASSIVE 'FOR' LOOP for every object in Sloan List
 
 for a in range(1239):
 	#create wvlen, flux, error lists as a failsafe
